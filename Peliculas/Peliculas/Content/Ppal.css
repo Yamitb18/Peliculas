@@ -1,0 +1,34 @@
+﻿body {
+      font-family: 'Roboto';
+      font-size: 14px;
+}
+
+#page-content {
+    margin-left: 40px;
+    margin-top: 90px;
+    margin-right: 40px;
+    padding: 10px;
+}
+
+footer p {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+#txtbuscar{
+    height: 33px;
+}
+
+.navbar-brand {
+    font-size: 25px !important;
+}
+
+#body-result
+{
+    height: 534px !important;
+}
+
+img {
+    height: 350px;
+    width:250px;
+}

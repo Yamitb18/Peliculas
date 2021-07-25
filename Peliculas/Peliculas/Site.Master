@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Votaciones.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link href="Content/Bootstrap/bootstrap3.min.css" rel="stylesheet" />
+    <link href="Content/Bootstrap/font-awesome.min.css" rel="stylesheet" />
+    <link href="Content/Ppal.css" rel="stylesheet" />
+    <link href="Content/SweetAlert2/sweetalert2.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <!-- js -->
+        <script src="../Scripts/jquery.min.js"></script>
+        <script src="../Scripts/bootstrap3.js"></script>
+        <script src="../Scripts/modal.js"></script>
+        <script src="../Scripts/Angular/angular.min.js"></script>
+        <script src="../Scripts/Angular/angular-aria.min.js"></script>
+        <script src="../Scripts/Angular/angular-animate.min.js"></script>
+        <script src="../Scripts/Angular/angular-sanitize.min.js"></script>
+        <script src="../Scripts/Angular/angular-messages.min.js"></script>
+        <script src="../Scripts/ui-bootstrap-tpls-0.11.0.js"></script>
+        <script src="../Scripts/SweetAlert2/sweetalert2.min.js"></script>
+        <script src="../Scripts/Catalogo/Peliculas.js?0"></script>
+
+        <div ng-app="app" ng-controller="ctr" ng-init="">
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" runat="server" href="~/">Películas</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Page Content -->
+                <div id="page-content">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <hr />          
+                <footer>
+                    <p>&copy; <%: DateTime.Now.Year %></p>
+                </footer>
+           
+        </div>
+        <script type="text/javascript">
+
+            function AbrirModal(NombreModal) {
+                $(NombreModal).modal('show');
+            }
+
+            function CerrarModal(NombreModal) {
+                $(NombreModal).modal('hide');
+                $('body').removeClass('modal-open');
+            }
+
+        </script>
+    </form>
+</body>
+</html>
